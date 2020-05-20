@@ -1,39 +1,47 @@
 *{
     padding: 0;
     margin: 0;
-    background: blue;
 }
 
 html{
     scroll-behavior: smooth;
 }
 
-.nav-logo{
-    display: flex;
-    justify-content: center; 
+nav{
+    background: rgba(255, 255, 255, 0);
+}
+
+nav > a > .contenedor-logo{
+    width: 100%;
+    height: auto;
+}
+
+nav > a > .navbar-imagen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 20vh;
+    z-index: 1;
+}  
+
+nav > a > div > #logo{
+    width: 25%;
+    height: 20vh;
     background: rgba(255, 255, 255, 0);
     position: absolute;
-    top: 20px;
+    z-index: 2;
+    top: 40px;
     left: 0;
+    bottom: 0;
     right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-.nav-imagen{
-    background-image: url(../img/navbarcake.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center top;
-    height: 30vh;
-
     
-}
-
-#logo{
-    width: 130px;
-    height: 130px;
-    background: white;
-    border-radius: 50px;
-}
+ 
 
 .background-cover{
     height: 100vh;
@@ -47,5 +55,8 @@ html{
     grid-template-rows: auto auto 100px;
     justify-content: center;
     align-content: center;
+    /* position: relative;
+    z-index: 1; */
+    
     
 }
