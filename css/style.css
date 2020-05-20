@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    background: blue;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.nav-logo{
+    display: flex;
+    justify-content: center; 
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+}
+
+.nav-imagen{
+    background-image: url(../img/navbarcake.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 30vh;
+
+    
+}
+
+#logo{
+    width: 130px;
+    height: 130px;
+    background: white;
+    border-radius: 50px;
+}
+
+.background-cover{
+    height: 100vh;
+    background-image: url(../img/ponq1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    display: grid;
+    grid-template-columns: .9fr;
+    grid-template-rows: auto auto 100px;
+    justify-content: center;
+    align-content: center;
+    
+}
