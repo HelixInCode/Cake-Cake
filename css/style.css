@@ -20,6 +20,10 @@ nav > a > .contenedor-logo{
     height: auto;
 }
 
+nav > a > .contenedor-logo > #logo{
+    filter: drop-shadow(0 2px 5px rgba(109, 109, 109, 0.7));
+}
+
 nav > a > .navbar-imagen{
     position: absolute;
     top: 0;
@@ -29,6 +33,7 @@ nav > a > .navbar-imagen{
     width: 100%;
     height: 20vh;
     z-index: 1;
+    filter: drop-shadow(0 2px 5px rgba(104, 104, 104, 0.7));
 }  
 
 nav > a > div > #logo{
@@ -67,6 +72,7 @@ nav > .navbar-menu > .nav-item > a{
     font-family: 'Parisienne', cursive;
     color: #ff5757;
     font-size: 20px;
+    text-shadow: 2px 2px 2px rgb(153, 153, 153);
 } 
 
 nav > .navbar-menu > .link-3{
@@ -86,8 +92,16 @@ nav > .navbar-menu > .link-3{
     grid-template-rows: auto auto 100px;
     justify-content: center;
     align-content: center;
-    /* position: relative;
-    z-index: 1; */
     
     
+    
+}
+
+footer{
+    background: blueviolet;
+}
+
+footer > .contenedor-footer > div{
+    margin: 20px;
+    background: chocolate;
 }
