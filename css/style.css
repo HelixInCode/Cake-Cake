@@ -1,7 +1,11 @@
 *{
     padding: 0;
     margin: 0;
+    list-style: none;
 }
+/*========FONTS IMPORTADAS=======*/
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+/*font-family: 'Questrial', sans-serif;*/
 
 html{
     scroll-behavior: smooth;
@@ -33,14 +37,41 @@ nav > a > div > #logo{
     background: rgba(255, 255, 255, 0);
     position: absolute;
     z-index: 2;
-    top: 40px;
+    top: 30px;
     left: 0;
     bottom: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
 }
+
+nav > .navbar-menu{
+    position: absolute;
+    z-index: 3;
+    top: 5vh;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: repeat(2, .5fr) 1fr repeat(2, .5fr);
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
     
+}
+nav > .navbar-menu > .nav-item{
+    float: left;
+}  
+
+nav > .navbar-menu > .nav-item > a{
+    font-family: 'Parisienne', cursive;
+    color: #ff5757;
+    font-size: 20px;
+} 
+
+nav > .navbar-menu > .link-3{
+    grid-column: 4/5;
+}
  
 
 .background-cover{
