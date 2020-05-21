@@ -128,7 +128,8 @@ nav > .navbar-menu > .link-3{
     background-image: url(../img/backgrounds/background-galeria.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
+    background-attachment: fixed;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
@@ -136,9 +137,9 @@ nav > .navbar-menu > .link-3{
 }
 
 .background-productos > .contenedor-galeria{
-    margin-top: 90px;
+    margin-top: 120px;
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 20px;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     align-items: center;
@@ -158,15 +159,15 @@ nav > .navbar-menu > .link-3{
 
 .background-productos > .contenedor-galeria > .galeria{
     display: grid;
-    grid-gap: 5px;
+    grid-gap: 10px;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: 1fr 1fr;
 }
 
-.background-productos > .contenedor-galeria > .galeria > div{
-    width: 100px;
-    height: 100px;
-    background: blue;
+.background-productos > .contenedor-galeria > .galeria > div > img{
+    width: 200px;
+    height: 200px;
+    border: 2px solid #ff5757;
 }
 
 /*==========footer==========*/
