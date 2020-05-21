@@ -97,6 +97,30 @@ nav > .navbar-menu > .link-3{
     
 }
 
+.contenedor-preguntas{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    left: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.705);  
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(109, 109, 109, 0.7);
+}
+
+.contenedor-preguntas:hover{
+    height: 10%;
+    font-size: 20px;
+}
+
+.contenedor-preguntas > a{
+    color: #ff5757;
+    font-family: 'Parisienne', cursive;
+}
+
+/*==========footer==========*/
 footer{
     background: blueviolet;
 }
