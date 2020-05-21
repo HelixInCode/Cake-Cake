@@ -82,14 +82,14 @@ nav > .navbar-menu > .link-3{
 
 .background-cover{
     height: 100vh;
-    background-image: url(../img/ponq1.jpg);
+    background-image: url(../img/carousel/ponq1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
-    display: grid;
+    /* display: grid;
     grid-template-columns: .9fr;
-    grid-template-rows: auto auto 100px;
+    grid-template-rows: auto auto 100px; */
     justify-content: center;
     align-content: center;
     
@@ -120,6 +120,53 @@ nav > .navbar-menu > .link-3{
 .contenedor-preguntas > a{
     color: #ff5757;
     font-family: 'Parisienne', cursive;
+}
+
+/*===============VENTANA PRODUCTOS================*/
+.background-productos{
+    height: 100vh;
+    background-image: url(../img/backgrounds/background-galeria.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    
+}
+
+.background-productos > .contenedor-galeria{
+    margin-top: 90px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-items: center;
+}
+
+.background-productos > .contenedor-galeria > .titulos{
+    color: #ff5757;
+    font-family: 'Parisienne', cursive;
+    font-size: 60px;
+    text-shadow: 2px 2px 2px rgba(109, 109, 109, 0.7);
+    border-bottom: 2px solid #ff5757;
+    padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.background-productos > .contenedor-galeria > .galeria{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 1fr 1fr;
+}
+
+.background-productos > .contenedor-galeria > .galeria > div{
+    width: 100px;
+    height: 100px;
+    background: blue;
 }
 
 /*==========footer==========*/
