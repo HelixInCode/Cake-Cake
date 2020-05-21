@@ -71,7 +71,7 @@ nav > .navbar-menu > .nav-item{
 nav > .navbar-menu > .nav-item > a{
     font-family: 'Parisienne', cursive;
     color: #ff5757;
-    font-size: 20px;
+    font-size: 4vh;
     text-shadow: 2px 2px 2px rgb(153, 153, 153);
 } 
 
@@ -97,6 +97,7 @@ nav > .navbar-menu > .link-3{
     
 }
 
+
 .contenedor-preguntas{
     position: fixed;
     bottom: 0;
@@ -108,6 +109,7 @@ nav > .navbar-menu > .link-3{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     box-shadow: 2px 2px 2px rgba(109, 109, 109, 0.7);
+    font-size: 15px;
 }
 
 .contenedor-preguntas:hover{
