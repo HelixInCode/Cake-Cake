@@ -102,17 +102,13 @@ nav > .nav-images > .contenedor-logo > #logo{
     } 
 
     nav > .nav-images > .background-nav > .nav-item > a{
-        margin-top: 30px;
-        font-size: 40px;
+        margin-top: 20px;
+        font-size: 30px;
         
     } 
 
-    nav > .nav-images > .background-nav > .nav-item > a{
-        font-size: 40px;
-    } 
-
     nav > .nav-images > .contenedor-logo > #logo{
-        width: 250px;
+        width: 150px;
         top: 20px;
     }
 }
@@ -124,13 +120,13 @@ nav > .nav-images > .contenedor-logo > #logo{
     } 
 
     nav > .nav-images > .background-nav > .nav-item > a{
-        font-size: 50px;
-        margin-top: 40px;
+        font-size: 40px;
+        margin-top: 30px;
         /* font-weight: 600; */
     } 
     nav > .nav-images > .contenedor-logo > #logo{
         
-        width: 300px;
+        width: 200px;
         top: 30px;
     }
 }
@@ -400,6 +396,7 @@ nav > .nav-images > .contenedor-logo > #logo{
 > .imagen-promo > img{
     width: 400px;
     height: 400px;
+    margin-top: 20px;
     border-radius: 20px;
     filter: drop-shadow(0 2px 5px rgba(204, 113, 113, 0.7));
 }
@@ -414,4 +411,9 @@ nav > .nav-images > .contenedor-logo > #logo{
     padding-top: 30px;
     margin-left: auto;
     margin-right: auto;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
 }
+
+.background-promociones > .contenedor-promociones > .contenedor-promo
+> .descripcion-promo > {
