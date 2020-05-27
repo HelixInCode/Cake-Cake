@@ -10,6 +10,7 @@
 :root{
     --rojito: #ff5757;
     --marroncito: #7b5d5b;
+    --letracurva: 'Parisienne', cursive;
 }
 
 html{
@@ -43,7 +44,7 @@ nav > .nav-images > .background-nav{
 
 
 nav > .nav-images > .background-nav > .nav-item > a{
-    font-family: 'Parisienne', cursive;
+    font-family: var(--letracurva);
     color: var(--rojito);
     font-size: 30px;
     /* font-weight: 600; */
@@ -94,6 +95,7 @@ nav > .nav-images > .contenedor-logo > #logo{
     color: var(--rojito);
     transform: scale(1.4);
 }
+
 
 @media (min-width: 1200px){
     nav > .nav-images > .background-nav{
@@ -384,6 +386,8 @@ nav > .nav-images > .contenedor-logo > #logo{
 .background-promociones > .contenedor-promociones > .contenedor-promo{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .background-promociones > .contenedor-promociones > .contenedor-promo 
@@ -407,7 +411,7 @@ nav > .nav-images > .contenedor-logo > #logo{
     margin-left: auto;
     margin-right: auto;
     display: grid;
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
     padding: 10px;
     justify-content: center;
     align-content: center;
@@ -416,7 +420,7 @@ nav > .nav-images > .contenedor-logo > #logo{
 }
 
 .background-promociones > .contenedor-promociones > .contenedor-promo
-> .descripcion-promo> #nombre{
+> .descripcion-promo> .titulos{
     color: var(--rojito);
     font-family: 'Parisienne', cursive;
     font-size: 40px;
@@ -425,15 +429,80 @@ nav > .nav-images > .contenedor-logo > #logo{
 }
 
 .background-promociones > .contenedor-promociones > .contenedor-promo
-> .descripcion-promo > #descripcion{
+> .descripcion-promo > .promo{
     font-size:30px ;
     color: var(--marroncito);
     font-family: 'Parisienne', cursive;
     text-shadow: 2px 2px 2px #32a9ee;
     
+}
+
+.background-promociones > .contenedor-promociones > .contenedor-promo
+> .descripcion-promo > .precio{
+    /* font-family: 'Parisienne', cursive; */
+    color: var(--rojito)
+    
+}
+
+.background-promociones > .contenedor-promociones > .contenedor-promo
+> .descripcion-promo > .precio > p{
+    font-size: 30px;
+    text-shadow: 2px 2px 2px #7b5d5b;
+    background: #38b6ff;
+    border-radius: 10px;
+}
+
+
+@media(min-width:520px) and (max-width:800px){
+    .background-promociones > .contenedor-promociones > .titulos{
+        text-align: center;
+    }
+
+    .background-promociones > .contenedor-promociones > .contenedor-promo 
+    > .imagen-promo > img{
+        width: 350px;
+        height: 300px;
+        
+    }
+
+    .background-promociones > .contenedor-promociones > .contenedor-promo
+    > .descripcion-promo{
+        width: 350px;
+        height: 300px;
+                
+    }
+
+    .background-promociones > .contenedor-promociones > .contenedor-promo
+    > .descripcion-promo> .titulos{
+        font-size:30px;
+    }
+
+    .background-promociones > .contenedor-promociones > .contenedor-promo
+    > .descripcion-promo > .promo{
+        font-size:20px ;
+    }
+
+    .background-promociones > .contenedor-promociones > .contenedor-promo
+    > .descripcion-promo > .precio > p{
+        font-size: 20px;
+    }
 
 }
 
-@media(max-width:850px){
-    
+
+
+@media (min-width: 1700px){
+    .background-promociones > .contenedor-promociones > .contenedor-promo 
+    > .imagen-promo > img{
+        width: 550px;
+        height: 500px;
+        /* margin-top: 20px; */
+        border-radius: 20px;
+        filter: drop-shadow(0 2px 5px rgba(204, 113, 113, 0.7));
+    }
+
+    .background-promociones > .contenedor-promociones > .titulos{
+        padding-top: 100px;
+    }
+
 }
