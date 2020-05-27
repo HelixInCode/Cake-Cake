@@ -40,6 +40,8 @@ nav > .nav-images > .background-nav{
     align-items: center;
     filter: drop-shadow(0 2px 5px rgba(204, 113, 113, 0.7));
 } 
+
+
 nav > .nav-images > .background-nav > .nav-item > a{
     font-family: 'Parisienne', cursive;
     color: var(--rojito);
@@ -91,6 +93,14 @@ nav > .nav-images > .contenedor-logo > #logo{
 .contenedor-preguntas:hover{
     color: var(--rojito);
     transform: scale(1.4);
+}
+
+@media (min-width: 1200px){
+    nav > .nav-images > .background-nav{
+       
+        height: 100px;
+        
+    } 
 }
 
 
@@ -312,7 +322,7 @@ nav > .nav-images > .contenedor-logo > #logo{
 
 /*=======VENTANA PROMOCIONES==========*/
 .background-promociones {
-    height: 100vh;
+    /* height: 100vh; */
     background-image: url(../img/backgrounds/background-galeria.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -341,4 +351,23 @@ nav > .nav-images > .contenedor-logo > #logo{
     padding-top: 30px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.background-promociones > .contenedor-promociones > .contenedor-promo{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.background-promociones > .contenedor-promociones > .contenedor-promo 
+> .imagen-promo{
+    margin: auto;
+}
+
+.background-promociones > .contenedor-promociones > .contenedor-promo 
+> .imagen-promo > img{
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    border: 2px outset black;
 }
