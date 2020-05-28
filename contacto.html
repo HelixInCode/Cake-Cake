@@ -20,92 +20,68 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="body">
-    <header>
-      <nav class="">
-        <div class="nav-images">
+  <header id="header">
+    <!-- NavBar Insertado por headerFooter.js -->
+  </header>
+  <main>
+    <section id="contacto" class="pb-5">
+      <h1 class="h1 pt-5">Contacto</h1>
+      <hr class="my-3">
+      <div class="contact-container p-2">
+        <ul class="form-social-networks">
+          <li>
+            <i class="fab fa-instagram"></i>
+            <span>@instagram</span>
+          </li>
+          <li>
+            <i class="fab fa-facebook-square"></i>
+            <span>/facebook</span>
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <span>ventas@cakemascake.com</span>
+          </li>
+          <li>
+            <i class="fas fa-home"></i>
+            <span>Dirección de Cake + Cake Mendoza | Argentina</span>
+          </li>
+        </ul>
 
-          <ul class="background-nav navbar-menu">
-            <li class="nav-item link-1">
-              <a href="./nosotros.html" class="nav-link">Nosotros</a>
-            </li>
-            <li class="nav-item link-2">
-              <a href="./productos.html" class="nav-link">Productos</a>
-            </li>
-            <li class="nav-item link-3">
-              <a href="./promociones.html" class="nav-link">Promociones</a>
-            </li>
-            <li class="nav-item link-4">
-              <a href="./contacto.html" class="nav-link">Contacto</a>
-            </li>
-          </ul>
-            <a href="./index.html" class="contenedor-logo">
-              <img id="logo" src="./img/backgrounds/Cake+Cake2png.png"  class="navbar-logo" alt="">       
-            </a>
+        <hr class="form-divition mx-2">
 
-          <a href="#" class="contenedor-preguntas">
-            Preguntas Frecuentes
-          </a>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <section id="contacto" class="py-5">
-        <h1 class="h1 mt-5 pt-5">Contacto</h1>
-        <hr class="my-3">
-        <div class="contact-container p-2">
-          <ul class="form-social-networks">
-            <li>
-              <i class="fab fa-instagram"></i>
-              <span>@instagram</span>
-            </li>
-            <li>
-              <i class="fab fa-facebook-square"></i>
-              <span>/facebook</span>
-            </li>
-            <li>
-              <i class="fas fa-envelope"></i>
-              <span>ventas@cakemascake.com</span>
-            </li>
-            <li>
-              <i class="fas fa-home"></i>
-              <span>Dirección de Cake + Cake Mendoza | Argentina</span>
-            </li>
-          </ul>
+        <form action="" class="p-2">
+          <div class="input-container">
+            <label for="nombre">Nombre</label>
+            <input name="nombre" type="text">
+          </div>
 
-          <hr class="form-divition mx-2">
+          <div class="input-container">
+            <label for="email">Email</label>
+            <input name="email" type="email">
+          </div>
 
-          <form action="" class="p-2">
-            <div class="input-container">
-              <label for="nombre">Nombre</label>
-              <input name="nombre" type="text">
-            </div>
+          <div class="input-container">
+            <label for="telefono">Teléfono</label>
+            <input name="telefono" type="tel">
+          </div>
 
-            <div class="input-container">
-              <label for="email">Email</label>
-              <input name="email" type="email">
-            </div>
+          <div class="input-container">
+            <label for="mensaje">Mensaje</label>
+            <textarea name="mensaje"></textarea>
+          </div>
+          <div class="input-container">
+            <button type="submit">Enviar</button>
+          </div>
 
-            <div class="input-container">
-              <label for="telefono">Teléfono</label>
-              <input name="telefono" type="tel">
-            </div>
-
-            <div class="input-container">
-              <label for="mensaje">Mensaje</label>
-              <textarea name="mensaje"></textarea>
-            </div>
-            <div class="input-container">
-              <button type="submit">Enviar</button>
-            </div>
-
-          </form>
-        </div>
-        <div class="contact-overlay">
-        </div>
-      </section>
-    </main>
-    <footer>
-    </footer>
+        </form>
+      </div>
+      <div class="contact-overlay">
+      </div>
+    </section>
+  </main>
+  <footer id="footer">
+    <!-- Footer Insertado por headerFooter.js -->
+  </footer>
 
   <!-- jQuery -->
   <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -115,7 +91,7 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Your custom scripts (optional) -->
-  <script type="text/javascript"></script>    
+    <!-- Your custom scripts (optional) -->
+    <script type="text/javascript" src="js/headerFooter.js"></script>   
 </body>
 </html>
