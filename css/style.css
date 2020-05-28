@@ -11,6 +11,7 @@
     --rojito: #ff5757;
     --marroncito: #7b5d5b;
     --letracurva: 'Parisienne', cursive;
+    --azulito: #38b6ff;
 }
 
 html{
@@ -506,3 +507,36 @@ nav > .nav-images > .contenedor-logo > #logo{
     }
 
 }
+
+
+/*======================FOOTER=====================*/
+
+footer > .footer-body {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    align-content: center;
+    text-align: center;
+}
+
+footer > .footer-body > .contenedor-delgado {
+    background: var(--azulito);
+}
+
+footer > .footer-body > .contenedor-delgado > p{
+    padding-top: 1%;
+    font-size: 12px; 
+}
+
+footer > .footer-body > .contenedor-medio {
+    background-image: url(../img/backgrounds/background-footer.jpg);
+    display: grid;
+    grid-template-columns: repeat(3, auto)
+}
+
+footer > .footer-body > .contenedor-medio > .enlaces{
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 40px 30px;
+}
+
