@@ -537,6 +537,13 @@ footer > .footer-body > .contenedor-medio > .enlaces{
     grid-column: 2/3;
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    margin: 40px 30px;
+    margin: 10% 5%;
+}
+
+@media(min-width:1700px){
+    footer > .footer-body > .contenedor-delgado > p{
+        padding-top: 1%;
+        font-size: 24px; 
+    }
 }
 
