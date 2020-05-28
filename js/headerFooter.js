@@ -24,7 +24,9 @@ const plantillaHeader = () => {
                   <a href="contacto.html" class="nav-link">Contacto</a>
                 </li>
               </ul>
-
+              <div id="hamburger" class="hamburger-btn">
+                <i id="ham-icon" class="fas fa-1-3x fa-bars"></i>
+              </div>
               <a href="#" class="contenedor-preguntas">
                 Preguntas Frecuentes
               </a>
