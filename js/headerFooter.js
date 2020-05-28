@@ -9,25 +9,39 @@ const plantillaHeader = () => {
               <a class="contenedor-logo" href="./index.html">
                 <img id="logo" src="./img/backgrounds/Cake+Cake2png.png"  class="navbar-logo" alt="">       
               </a>
-
-              <ul class="background-nav navbar-menu">
-                <li class="nav-item link-1">
+              <ul class="background-nav">
+               <li class="nav-item">
                   <a href="nosotros.html" class="nav-link">Nosotros</a>
                 </li>
-                <li class="nav-item link-2">
+                <li class="nav-item">
                   <a href="productos.html" class="nav-link">Productos</a>
                 </li>
-                <li class="nav-item link-3">
+                <li class="nav-item d-none d-md-block">
                   <a href="promociones.html" class="nav-link">Promociones</a>
                 </li>
-                <li class="nav-item link-4">
+                <li class="nav-item d-none d-md-block">
                   <a href="contacto.html" class="nav-link">Contacto</a>
                 </li>
               </ul>
-              <div id="hamburger" class="hamburger-btn">
+              <ul id="navHam" class="background-nav hide d-block d-md-none">
+                <li class="nav-item">
+                  <a href="promociones.html" class="nav-link">Promociones</a>
+                </li>
+                <li class="nav-item">
+                  <a href="contacto.html" class="nav-link">Contacto</a>
+                </li>
+                <li class="nav-item d-md-none">
+                  <a href="#">
+                    FAQ
+                  </a>
+                </li>
+              </ul>
+
+              <div id="hamburger" class="hamburger-btn d-md-none">
                 <i id="ham-icon" class="fas fa-1-3x fa-bars"></i>
               </div>
-              <a href="#" class="contenedor-preguntas">
+
+              <a href="#" class="contenedor-preguntas d-none d-md-block">
                 Preguntas Frecuentes
               </a>
             </div>
