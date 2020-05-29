@@ -10,11 +10,17 @@ const plantillaHeader = () => {
                 <img id="logo" src="./img/backgrounds/Cake+Cake2png.png"  class="navbar-logo" alt="">       
               </a>
               <ul class="background-nav">
+                <li class="nav-item">
+                  <a href="index.html" class="nav-link">Home</a>
+                </li>
                <li class="nav-item">
                   <a href="nosotros.html" class="nav-link">Nosotros</a>
                 </li>
                 <li class="nav-item">
                   <a href="productos.html" class="nav-link">Productos</a>
+                </li>
+                <li class="nav-item">
+                  <a href="servicios.html" class="nav-link">Servicios</a>
                 </li>
                 <li class="nav-item d-none d-md-block">
                   <a href="promociones.html" class="nav-link">Promociones</a>
@@ -69,6 +75,7 @@ const plantillaFooter = () => {
             </ul>
               
           </div>
+
           <div class="contenedor-delgado">
             <span>© 2020 Copyrigth: cakemascake.com</span>
           </div>

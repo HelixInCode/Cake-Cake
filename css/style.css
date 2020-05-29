@@ -120,6 +120,7 @@ nav > .nav-images > .background-nav > .nav-item > a{
 }
 
 
+
 /*===============VENTANA PRODUCTOS================*/
 #galeria-productos{
     padding-top: var(--section-top);
@@ -163,6 +164,50 @@ nav > .nav-images > .background-nav > .nav-item > a{
     border: 2px solid var(--rojito);
 }
 
+/*=====================Ventana de Servicios===================*/
+
+#servicios{
+    
+    padding-top: var(--section-top);
+    position: relative;
+    font-family: var(--letracurva);
+    font-weight: bold;
+    /* height: 100vh; */
+    background-image: url(../img/backgrounds/background-galeria.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: minmax(300px, 800px);
+    /* grid-template-rows: auto auto 350px; */
+    justify-content: center;
+    align-content: center;
+}
+
+#servicios > h1,
+#servicios > hr,
+#servicios > .contact-container{
+    z-index: 2;
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+#servicios > h1{
+    font-size: 60px;
+    color: var(--rojito);
+    text-align: center;
+    text-shadow: 2px 2px 2px rgba(109, 109, 109, 0.7);
+}
+#servicios > hr{
+    width: 100px;
+    border-top: 3px solid var(--rojito);
+    justify-self: center;
+}
+
+#servicios > .servicios-overlay{
+    
+}
+
 /*======================Ventana de Contacto=====================*/
 #contacto{
     
@@ -181,6 +226,7 @@ nav > .nav-images > .background-nav > .nav-item > a{
     justify-content: center;
     align-content: center;
 }
+
 #contacto > h1,
 #contacto > hr,
 #contacto > .contact-container{
@@ -388,6 +434,7 @@ footer > .footer-body {
     grid-template-columns: 1fr;
     text-align: center;
     font-family: "Roboto",sans-serif;
+    background: url(../img/backgrounds/background-footer.jpg);
 }
 footer > .footer-body > .contenedor-delgado {
     background: var(--azulito);
@@ -406,6 +453,7 @@ footer > .footer-body > .contenedor-medio > .enlaces{
     margin: 0;
     padding: 20px 30px;
 }
+
 
 @media screen and (min-width: 768px){
     :root{
