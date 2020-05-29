@@ -204,9 +204,36 @@ nav > .nav-images > .background-nav > .nav-item > a{
     justify-self: center;
 }
 
-#servicios > .servicios-overlay{
-    
+#servicios > .servicios-container{
+    width: auto;
+    height: auto;
+    background-color: var(--azulito);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2;
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-weight: 400;
+    display: grid;
+    grid-template-columns: repeat(2,minmax(300px, 800px));
+    box-shadow: 2px 2px 2px rgba(109, 109, 109, 0.7);
+    /* border: 1px solid #fff; */
 }
+
+#servicios > .servicios-container > img{
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+}
+
+#servicios > .servicios-container > .descripcion-servicios{
+    font-family: var(--letracurva);
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
 
 /*======================Ventana de Contacto=====================*/
 #contacto{
