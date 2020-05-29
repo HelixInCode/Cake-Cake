@@ -1,8 +1,10 @@
+<?php include('conexion.php');?>
 <!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta chars
+    et="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet"> 
@@ -13,22 +15,51 @@
     <title>Cake+Cake</title>
   </head>
   <body>
+     <?php
+   if (isset($_POST['Enviar'])) 
+   {
+       $nombre = mysqli_real_escape_string($conexion,$_POST['username']);
+       $clave = mysqli_real_escape_string($conexion,$_POST['password']);
+       $email = mysqli_real_escape_string($conexion,$_POST['mail']);
+
+    $sql = mysqli_query($conexion, "SELECT email FROM user WHERE email='".$email."'");
+    if (mysqli_num_rows($sql)>0) 
+    {?> 
+    <div>El correo de usuario elegido ya existe</div>
+    <?php }
+     
+     else {$clave = crypt($clave, "pass");
+           $reg = mysqli_query($conexion, "INSERT INTO user (nombre, email, clave) VALUES ('$nombre','$email','$clave')") or die(mysqli_error($conexion));
+        if ($reg) {
+            ?>
+            <div>Usuario creado correctamente</div>
+            <meta http-equiv="Refresh" content="2" url="lgn.php" />
+        <?php }
+    else {
+        ?>
     
+    <div>Error al guardar los datos</div>
+    <?php
+    }
+   } 
+     
+    }
+   ?>   
   <div id="login">
         <h3 class="text-center letra pt-5">Cake + Cake</h3>
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
-                        <form id="login-form" class="form" action="" method="post">
+                        <form id="login-form" class="form" action="" method="POST">
                             <h3 class="text-center text-info">Registro</h3>
                             <div class="form-group">
                                 <label for="username" class="text-info">Usuario:</label><br>
                                 <input type="text" name="username" id="username" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="password" class="text-info">Mail:</label><br>
-                                <input type="text" name="password" id="password" class="form-control">
+                                <label for="mail" class="text-info">Mail:</label><br>
+                                <input type="mail" name="mail" id="mail" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">Contraseña:</label><br>
