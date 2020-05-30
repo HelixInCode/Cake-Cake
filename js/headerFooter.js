@@ -10,7 +10,7 @@ const plantillaHeader = () => {
                 <img id="logo" src="./img/backgrounds/Cake+Cake2png.png"  class="navbar-logo" alt="">       
               </a>
               <ul class="background-nav">
-                <li class="nav-item">
+                <li class="nav-item d-none d-md-block">
                   <a href="index.html" class="nav-link">Home</a>
                 </li>
                <li class="nav-item">
@@ -19,7 +19,7 @@ const plantillaHeader = () => {
                 <li class="nav-item">
                   <a href="productos.html" class="nav-link">Productos</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item d-none d-md-block">
                   <a href="servicios.html" class="nav-link">Servicios</a>
                 </li>
                 <li class="nav-item d-none d-md-block">
@@ -31,6 +31,9 @@ const plantillaHeader = () => {
               </ul>
               <ul id="navHam" class="background-nav hide d-block d-md-none">
                 <li class="nav-item">
+                  <a href="servicios.html" class="nav-link">Servicios</a>
+                </li>
+                <li class="nav-item">
                   <a href="promociones.html" class="nav-link">Promociones</a>
                 </li>
                 <li class="nav-item">
@@ -38,7 +41,7 @@ const plantillaHeader = () => {
                 </li>
                 <li class="nav-item d-md-none">
                   <a href="#">
-                    FAQ
+                    P. Frecuentes
                   </a>
                 </li>
               </ul>
@@ -61,16 +64,16 @@ const plantillaFooter = () => {
           <div class="contenedor-medio">
             <ul class="enlaces">
               <li>
-                <a href="https://twitter.com/cakemascake"><i class="fab fa-twitter-square fa-3x cyan-text"></i></a>
+                <a href="https://twitter.com/cakemascake"><i class="fab fa-twitter-square fa-3x"></i></a>
               </li>
               <li>
-                <a href="https://www.facebook.com/cakemascake"><i class="fab fa-facebook fa-3x cyan-text"></i></a>
+                <a href="https://www.facebook.com/cakemascake"><i class="fab fa-facebook fa-3x"></i></a>
               </li>
               <li>
-                <a href="https://www.instagram.com/cakemascake/"><i class="fab fa-instagram fa-3x cyan-text"></i></a>
+                <a href="https://www.instagram.com/cakemascake/"><i class="fab fa-instagram fa-3x"></i></a>
               </li>
               <li>
-                <a href="https://api.whatsapp.com/send?phone=5492613624192"><i class="fab fa-whatsapp fa-3x cyan-text"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=5492613624192"><i class="fab fa-whatsapp fa-3x"></i></a>
               </li>
             </ul>
               
