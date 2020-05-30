@@ -40,7 +40,7 @@ const plantillaHeader = () => {
                   <a href="contacto.html" class="nav-link">Contacto</a>
                 </li>
                 <li class="nav-item d-md-none">
-                  <a href="#">
+                  <a href="faq.html">
                     P. Frecuentes
                   </a>
                 </li>
@@ -50,7 +50,7 @@ const plantillaHeader = () => {
                 <i id="ham-icon" class="fas fa-1-3x fa-bars"></i>
               </div>
 
-              <a href="#" class="contenedor-preguntas d-none d-md-block">
+              <a href="faq.html" class="contenedor-preguntas d-none d-md-block">
                 Preguntas Frecuentes
               </a>
             </div>
@@ -76,7 +76,7 @@ const plantillaFooter = () => {
                 <a href="https://api.whatsapp.com/send?phone=5492613624192"><i class="fab fa-whatsapp fa-3x"></i></a>
               </li>
             </ul>
-              
+            <div class="footer-overlay"></div>
           </div>
 
           <div class="contenedor-delgado">
