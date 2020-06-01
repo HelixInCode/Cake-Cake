@@ -535,6 +535,130 @@ footer > .footer-body > .contenedor-medio > .footer-overlay{
     background-color: rgba(120, 101, 90, 0.5);
 }
 
+@media screen and (min-width: 300px){
+    #nosotros > .nosotros-description > h1{
+        font-size: 30px;
+    }
+    #nosotros > .nosotros-description > h2{
+        font-size: 20px;
+    }
+    #nosotros > .nosotros-description > p{
+        font-size: 20px;
+        text-align: justify;
+    }
+    #nosotros > .nosotros-description {
+        margin: 20px;
+    }
+    #nosotros > .img-container > img{
+        width: 300px;
+        border-radius: 40px;
+    }
+    #galeria-productos > .titulos > h1{
+        font-size: 30px;
+    }
+    #galeria-productos > .galeria{
+        grid-gap: 10px;
+        grid-template-columns: repeat(2, minmax(100px, 150px));
+        justify-content: center;
+    }
+
+    #galeria-productos > .galeria > .img-container{
+        transition: .3s;
+        cursor: pointer;
+    }
+
+    #galeria-productos > .galeria > .img-container > img{
+        width: 100%;
+        border: 2px solid var(--rojito);
+    }
+    #servicios {
+        grid-template-columns: minmax(150px, 300px);
+    }
+    #servicios > h1{
+        font-size: 30px;
+    }
+    #servicios > hr{
+        width: 80px;
+        border-top: 1px solid var(--rojito);
+        
+    }
+    #servicios > .servicios-container{
+        grid-template-columns: minmax(150px, 280px);
+        grid-template-rows: repeat(2, auto);
+        grid-gap: 10px;
+        padding: 10px;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    #servicios > .servicios-container > .imagen{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        align-self: center;
+        padding-left: 10px;
+    }
+    #servicios > .servicios-container > .imagen > img{
+        width: 270px;
+        height: auto;
+        border-radius: 20px;
+    }
+    #servicios > .servicios-container > .descripcion-servicios{
+        grid-row: 2/3;
+        grid-column: 1/2;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        padding-left: 10px;
+        
+    }
+    #servicios > .servicios-container > .descripcion-servicios > p{
+        font-size: 20px;
+        text-align: justify;
+    }
+    #promociones {
+        grid-template-columns: minmax(150px, 300px);
+        grid-template-rows: repeat(2, auto);
+    }
+    #promociones > h1{
+        font-size: 30px;
+    }
+    #promociones > .contenedor-promo{
+        grid-template-columns: minmax(150px, 280px);
+    }
+    #promociones > .contenedor-promo > .descripcion-promo > .titulos{
+        font-size: 30px;
+    }
+    #promociones > .contenedor-promo > .descripcion-promo > .promo{
+        font-size: 20px;
+    }
+    #promociones > .contenedor-promo > .descripcion-promo > .precio{
+        font-size: 25px;
+    }
+    #contacto{
+        grid-template-columns: minmax(150px, 300px);
+    }
+    #contacto > h1{
+        font-size: 30px;
+    }
+    #contacto > .contact-container > .form-social-networks > li {
+        font-size: 15px;
+    }
+    #contacto > .contact-container > form > .input-container > label{
+        font-size: 15px;
+    }
+    #faq > h1{
+        font-size: 30px;
+    }
+    #faq > article{
+        margin: 10px;
+    }
+    #faq > article > h2{
+        font-size: 20px;
+    } 
+    #faq > article > p{
+        font-size: 15px;
+        text-align: center;
+    } 
+}
+
 
 @media screen and (min-width: 768px){
     :root{
