@@ -7,6 +7,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
 /*font-family: 'Dancing Script', cursive;*/
 
+
+/*font-family: 'Parisienne', cursive;*/
+
 :root{
     --rojito: #ff5757;
     --marroncito: #7b5d5b;
@@ -121,13 +124,53 @@ nav > .nav-images > .background-nav > .nav-item > a{
     color: #fff;
 }
 .carousel > .carousel-inner > .background-cover:nth-of-type(1){
-    background-image: url(../img/carousel/ponq1.jpg);
+    background-image: url(../img/galeria/traba17.jpeg);
+}
+
+.carousel > .carousel-inner > .background-cover {
+    position: relative;
+    animation: thing 20s;
+    -o-animation: thing 20s;
+    -webkit-animation: thing 20s;
+}
+
+@keyframes thing{
+    from{
+        transform: scale(1,1);
+    }
+    to{
+        transform: scale(1.3, 1.3);
+    }
+} 
+.carousel > .carousel-inner > .background-cover > .overlay {
+    position: absolute;
+    top: 30vh;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(240, 248, 255, 0);
+    /* display: flex; */
+    text-align: center;
+    text-shadow: 2px 2px 2px var(--marroncito);
+}
+.carousel > .carousel-inner > .background-cover > .overlay > .titulo1{
+    font-size: 70px;
+    color: white;
+    font-family:'Roboto', sans-serif;
+    font-weight: 400;
+    
+}
+
+.carousel > .carousel-inner > .background-cover > .overlay > .titulo2{
+    font-size: 200px;
+    color: var(--rojito);
+    font-family: var(--letracurva);
 }
 .carousel > .carousel-inner > .background-cover:nth-of-type(2){
-    background-image: url(../img/carousel/ponq1.jpg);
+    background-image: url(../img/carousel/trab-6.jpeg);
 }
 .carousel > .carousel-inner > .background-cover:nth-of-type(3){
-    background-image: url(../img/carousel/ponq1.jpg);
+    background-image: url(../img/carousel/trab-5.jpeg);
 }
 
 
@@ -536,6 +579,18 @@ footer > .footer-body > .contenedor-medio > .footer-overlay{
 }
 
 @media screen and (min-width: 320px){
+    .carousel > .carousel-inner > .background-cover > .overlay > .titulo1{
+        font-size: 25px;
+        color: white;
+        font-family:'Roboto', sans-serif;
+        font-weight: 400;
+    }
+    
+    .carousel > .carousel-inner > .background-cover > .overlay > .titulo2{
+        font-size: 55px;
+        color: var(--rojito);
+        font-family: var(--letracurva);
+    }
     #nosotros > .nosotros-description > h1{
         font-size: 30px;
     }
@@ -657,7 +712,7 @@ footer > .footer-body > .contenedor-medio > .footer-overlay{
     } 
     #faq > article > p{
         font-size: 20px;
-        text-align: center;
+        text-align: justify;
         font-weight: 500;
     } 
 }
@@ -666,6 +721,18 @@ footer > .footer-body > .contenedor-medio > .footer-overlay{
 @media screen and (min-width: 768px){
     :root{
         --section-top: 120px;
+    }
+    .carousel > .carousel-inner > .background-cover > .overlay > .titulo1{
+        font-size: 40px;
+        color: white;
+        font-family:'Roboto', sans-serif;
+        font-weight: 400;
+    }
+    
+    .carousel > .carousel-inner > .background-cover > .overlay > .titulo2{
+        font-size: 100px;
+        color: var(--rojito);
+        font-family: var(--letracurva);
     }
     /* 223 */
     nav > .nav-images > .contenedor-logo > #logo{
@@ -824,7 +891,18 @@ footer > .footer-body > .contenedor-medio > .footer-overlay{
 }
 
 @media screen and (min-width:1700px){
-
+    .carousel > .carousel-inner > .background-cover > .overlay > .titulo1{
+        font-size: 100px;
+        color: white;
+        font-family:'Roboto', sans-serif;
+        font-weight: 400;
+    }
+    
+    .carousel > .carousel-inner > .background-cover > .overlay > .titulo2{
+        font-size: 160px;
+        color: var(--rojito);
+        font-family: var(--letracurva);
+    }
 
     #nosotros{
         grid-gap: 40px;
