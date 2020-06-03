@@ -1,3 +1,7 @@
+<?php
+session_start();
+include ('conexion.php');
+?>
 <!doctype html>
 <html lang="es">
   <head>
@@ -13,6 +17,34 @@
     <link rel="stylesheet" href="css/lgn.css">
   </head>
   <body>
+
+  <?php
+
+    if(isset($_POST['Enviar'])) { // comprobamos que se hayan enviado los datos del formulario
+
+        $usuario= mysqli_real_escape_string($conexion,$_POST['username']);
+        $clave = mysqli_real_escape_string($conexion,$_POST['password']);
+        $clave = crypt($clave,"pass");
+
+    // comprobamos que los datos ingresados en el formulario coincidan con los de la BD
+        $sql = mysqli_query($conexion,"SELECT id_user, nombre, clave FROM user WHERE nombre='$usuario' AND clave='$clave'") or die(mysqli_error($conexion));
+        $resultado=mysqli_num_rows($sql);//cuento el número de coincidencias
+        $row = mysqli_fetch_array($sql);
+    //echo "todavia no entro en el if";
+        if($resultado==1) {
+            $_SESSION['id_user'] = $row['id_user']; // creamos la sesion "usuario_id" y le asignamos como valor el campo usuario_id
+            $_SESSION['nombre'] = $row["nombre"]; // creamos la sesion "usuario_nombre" y le asignamos como valor el campo 
+            header("Location: home.php");
+        }else {
+            echo "usuario inexistente";
+        ?>
+        <div class="alerta-error">Usuario inexistente</div>                    
+        </h1>
+     <?php
+    }
+}
+
+?>
     
   <div id="login">
         <h3 class="text-center letra pt-5">Cake + Cake</h3>
