@@ -22,27 +22,35 @@ include ('conexion.php');
 
     if(isset($_POST['Enviar'])) { // comprobamos que se hayan enviado los datos del formulario
 
-        $usuario= mysqli_real_escape_string($conexion,$_POST['username']);
-        $clave = mysqli_real_escape_string($conexion,$_POST['password']);
-        $clave = crypt($clave,"pass");
+        if(isset($_POST['username'])&& !empty($_POST['username']) && 
+        isset($_POST['password']) && !empty($_POST['password'])){ 
+            $usuario= mysqli_real_escape_string($conexion,$_POST['username']);
+            $clave = mysqli_real_escape_string($conexion,$_POST['password']);
+            $clave = crypt($clave,"pass");
 
-    // comprobamos que los datos ingresados en el formulario coincidan con los de la BD
-        $sql = mysqli_query($conexion,"SELECT id_user, nombre, clave FROM user WHERE nombre='$usuario' AND clave='$clave'") or die(mysqli_error($conexion));
-        $resultado=mysqli_num_rows($sql);//cuento el número de coincidencias
-        $row = mysqli_fetch_array($sql);
-    //echo "todavia no entro en el if";
-        if($resultado==1) {
-            $_SESSION['id_user'] = $row['id_user']; // creamos la sesion "usuario_id" y le asignamos como valor el campo usuario_id
-            $_SESSION['nombre'] = $row["nombre"]; // creamos la sesion "usuario_nombre" y le asignamos como valor el campo 
-            header("Location: home.php");
-        }else {
-            echo "usuario inexistente";
-        ?>
-        <div class="alerta-error">Usuario inexistente</div>                    
-        </h1>
-     <?php
+            // comprobamos que los datos ingresados en el formulario coincidan con los de la BD
+            $sql = mysqli_query($conexion,"SELECT id_user, nombre, clave FROM user WHERE nombre='$usuario' AND clave='$clave'") or die(mysqli_error($conexion));
+            $resultado=mysqli_num_rows($sql);//cuento el número de coincidencias
+            $row = mysqli_fetch_array($sql);
+            //echo "todavia no entro en el if";
+                
+
+                if($resultado==1) {
+                    $_SESSION['id_user'] = $row['id_user']; // creamos la sesion "usuario_id" y le asignamos como valor el campo usuario_id
+                    $_SESSION['nombre'] = $row["nombre"]; // creamos la sesion "usuario_nombre" y le asignamos como valor el campo 
+                    header("Location: home.php");
+                }else {
+                
+ ?>
+                <div class="alerta-error">Usuario o contraseña incorrectos</div>                    
+                </h1>
+                <?php
+                }
+            
+        }else{
+          echo "Falta completar campos";
+        }
     }
-}
 
 ?>
     
@@ -60,7 +68,7 @@ include ('conexion.php');
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">Contraseña:</label><br>
-                                <input type="text" name="password" id="password" class="form-control">
+                                <input type="password" name="password" id="password" class="form-control">
                             </div>
                             <div class="form-group">
                                 

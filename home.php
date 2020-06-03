@@ -11,13 +11,47 @@ if(isset($_SESSION['nombre'])){
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+     <!-- Cake + Cake icon -->
+  <link rel="icon" href="img/backgrounds/cake+cake-icon.png" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!--Google Fonts Parisine-->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <h3>Hola!!!</h3>
+        <div class="pb-5">
+          <form action="" method="POST">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Título</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="título">
+       
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Descripción</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Descripción">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Precio</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Precio">
+      </div>
+      <div class="form-group form-check">
+        <label for="exampleFormControlFile1">Example file input</label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
