@@ -124,7 +124,7 @@ nav > .nav-images > .background-nav > .nav-item > a{
     color: #fff;
 }
 .carousel > .carousel-inner > .background-cover:nth-of-type(1){
-    background-image: url(../img/galeria/traba17.jpeg);
+    background-image: url(../img/carousel/am1.jpeg);
 }
 
 .carousel > .carousel-inner > .background-cover {
@@ -525,7 +525,7 @@ nav > .nav-images > .background-nav > .nav-item > a{
 #faq > article:first-of-type{
     padding-top: 0;
 }
-#faq p{
+#faq > article > p{
     font-size: 25px;
     color: rgba(0, 0, 0, 0.8);
 }
@@ -858,6 +858,9 @@ footer > .footer-body > .contenedor-medio > .footer-overlay{
         grid-template-columns: minmax(300px, 400px) minmax(300px, 500px);
         grid-gap: 10px;
     }
+    #faq > article > p{
+        text-align: center;
+    }
 }
 @media screen and (min-width: 1200px){
     nav > .nav-images > .background-nav > .nav-item > a{
@@ -888,6 +891,10 @@ footer > .footer-body > .contenedor-medio > .footer-overlay{
 
     #promociones > .contenedor-promo{
         grid-template-columns: repeat(2, minmax(400px, 600px));
+    }
+
+    #faq > article > p{
+        text-align: center;
     }
 }
 
