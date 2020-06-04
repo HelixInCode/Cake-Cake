@@ -52,6 +52,9 @@
       </div>';
 
     }
+  }else {
+    echo '<h3 class="titulos">No hay ofertas por ahora</h3>';
+
   }
   ?>
   </section>
