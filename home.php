@@ -28,27 +28,65 @@ if(isset($_SESSION['nombre'])){
     <title>Hello, world!</title>
   </head>
   <body>
-    <h3>Hola!!!</h3>
+  <?php
+  
+
+  
+  ?>
+   <?php 
+  
+   if (isset($_POST['Enviar']))          
+   {
+    $Titulo= $_POST["Titulo"];
+    $Descripcion= $_POST["Descripcion"];
+    $Precio= $_POST["Precio"];
+    $img= addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
+    $ruta= $_FILES['imagen']['name'];
+    $tipo= $_FILES['imagen']['type'];
+
+  
+    
+     if ($img == !NULL){
+     
+      $extension_correcta = ($tipo == 'image/jpeg' or $tipo == 'image/jpg' or $tipo == 'image/png' or $tipo == 'image/gif');
+      if ($extension_correcta){
+
+
+       $oferta= mysqli_query($conexion,"INSERT INTO oferta (oferta, descripcion, precio, foto) VALUES ('$Titulo','$Descripcion','$Precio','$ruta')");
+        if ($oferta){
+        $move= move_uploaded_file($_FILES['imagen']['tmp_name'], "images/".$_FILES['imagen']['name']);
+        echo "se guardo la oferta";
+    }
+      }
+      else {
+        echo "Error al guardar Promocion";
+      }
+    }else{
+      echo "Error al guardar Promocion";
+    } 
+    }
+   ?>
+    <h3>Panel de Ofertas</h3>
         <div class="pb-5">
-          <form action="" method="POST">
+          <form action="" method="POST" enctype="multipart/form-data">
       <div class="form-group">
-        <label for="exampleInputEmail1">Título</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="título">
+        <label>Título</label>
+        <input type="text" name="Titulo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="título">
        
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Descripción</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Descripción">
+        <label>Descripción</label>
+        <input type="text" name="Descripcion" class="form-control" id="exampleInputPassword1" placeholder="Descripción">
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Precio</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Precio">
+        <label>Precio</label>
+        <input type="text" name="Precio" class="form-control" id="exampleInputPassword1" placeholder="Precio">
       </div>
       <div class="form-group form-check">
-        <label for="exampleFormControlFile1">Example file input</label>
-        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        <label>Example file input</label>
+        <input type="file" name="imagen" class="form-control-file">
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" name="Enviar" class="btn btn-primary">Submit</button>
       </form>
     </div>
 

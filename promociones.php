@@ -1,3 +1,4 @@
+<?php include ('conexion.php');?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,6 +7,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Cake + Cake</title>
   <!-- Cake + Cake icon -->
+
   <link rel="icon" href="img/backgrounds/cake+cake-icon.png" type="image/x-icon">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
@@ -25,29 +27,34 @@
     <!-- NavBar Insertado por headerFooter.js -->
   </header>
   <main>
-    <section id="promociones" class="pb-5 px-2">
+  <section id="promociones" class="pb-5 px-2">
 
       <h1>Promoción de la Semana</h1>
-
-      <div class="contenedor-promo">
-
+  <?php
+      $consulta = mysqli_query ($conexion, "SELECT * FROM oferta ORDER BY idoferta DESC LIMIT 3");
+      $totaloferta = mysqli_num_rows ($consulta);
+      
+      if ($totaloferta > 0){
+         while ($oferta = mysqli_fetch_array($consulta)){ 
+         $foto = $oferta ['foto'];
+         
+          echo '
+        
+         <div class="contenedor-promo">
         <div class="img-promo">
-          <img class="img-fluid" src="img/galeria/trab-3.jpeg" alt="">
+          <img class="img-fluid" src="images/'.$foto.'" alt="">
         </div>
-
         <div class="descripcion-promo">
-
-          <h3 class="titulos">Papito, Te quiero!</h3>
-
-          <p class="promo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique debitis, unde hic adipisci, beatae ad quam incidunt fugiat praesentium necessitatibus sint provident minus, velit dolore iste itaque aut eligendi minima.</p>
-
-          <span class="precio">$230</span>
-
+          <h3 class="titulos">'.$oferta['oferta'].'</h3>
+          <p class="promo">'.$oferta['descripcion'].'</p>
+          <span class="precio">'.$oferta['precio'].'</span>
         </div>
+      </div>';
 
-      </div>
-
-    </section>
+    }
+  }
+  ?>
+  </section>
 
   </main>
   <footer id="footer" class="page-footer">
