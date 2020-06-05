@@ -71,15 +71,18 @@ if(isset($_SESSION['nombre'])){
    <div>
     <ul class="nav nav-tabs">
     <li class="nav-item">
-      <a class="nav-link active" href="#">Guardar</a>
+      <a class="nav-link" href="#">Guardar</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Modificar</a>
-    </li>
+      <a class="nav-link" href="#lista">Modificar</a>
+    </li> 
     <li class="nav-item">
-      <a class="nav-link" href="#">Borrar</a>
+      <a class="nav-link" href="#lista">Borrar</a>
     </li>
-    
+     <li class="nav-item">
+      <a class="nav-link" style="color: #ff0000;" href="cerrar.php">Cerrar Sesion</a>
+    </li>
+
     </ul>
     <section id="Guardar Ofertas">
     <h3>Panel de Ofertas</h3>
@@ -108,7 +111,7 @@ if(isset($_SESSION['nombre'])){
   </div>
   </section>
 
-  <section>
+  <section id="lista">
     <div class="lista">
     <table class="table table-striped">
   <thead>
@@ -126,7 +129,8 @@ if(isset($_SESSION['nombre'])){
     $buscarofertas=mysqli_query($conexion,"SELECT * FROM oferta ")or die(mysqli_error($conexion));
     
 
-    while($ofertas=mysqli_fetch_array($buscarofertas)){ 
+    while($ofertas=mysqli_fetch_array($buscarofertas)){
+      $id = $ofertas['idoferta']; 
 
   ?>
   
@@ -135,8 +139,8 @@ if(isset($_SESSION['nombre'])){
       <td><?php echo $ofertas['oferta'];  ?></td>
       <td><?php echo $ofertas['descripcion'];  ?></td>
       <td><?php echo $ofertas['precio'];  ?></td>
-      <td><a href=''> <button class="btn btn-info"><i class="fas fa-pen"></i></button></a></td>
-      <td><a href=''><button class="btn btn-danger"><i class="fas fa-trash"></i></button></a></td>
+      <td><a href='<?php echo "detalle.php?idoferta=$id" ?>'> <button class="btn btn-info"><i class="fas fa-pen"></i></button></a></td>
+      <td><a href='<?php echo "borrar.php?idoferta=$id" ?>'><button class="btn btn-danger"><i class="fas fa-trash"></i></button></a></td>
     </tr>
 
     <?php  } ?>

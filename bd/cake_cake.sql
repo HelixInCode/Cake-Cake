@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-06-2020 a las 22:53:22
+-- Tiempo de generación: 05-06-2020 a las 23:09:43
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.3.2
 
@@ -29,11 +29,21 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `oferta` (
-  `id-oferta` int(50) NOT NULL,
+  `idoferta` int(50) NOT NULL,
   `oferta` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `descripcion` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
-  `foto` varchar(50) COLLATE utf8_spanish_ci NOT NULL
+  `precio` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `foto` varchar(255) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `oferta`
+--
+
+INSERT INTO `oferta` (`idoferta`, `oferta`, `descripcion`, `precio`, `foto`) VALUES
+(29, 'torta', 'pedazo de pastel de cereza ', '$250', 'WhatsApp Image 2020-06-01 at 15.40.36.jpeg'),
+(30, 'pastel 2', 'pedazo de pastel de cereza ', '$250', 'WhatsApp Image 2020-06-01 at 15.40.45.jpeg'),
+(31, 'Pastel 3', 'pedazo de pastel de cereza ', '$250', 'WhatsApp Image 2020-06-01 at 15.40.42.jpeg');
 
 -- --------------------------------------------------------
 
@@ -57,7 +67,8 @@ INSERT INTO `user` (`id_user`, `nombre`, `email`, `clave`) VALUES
 (2, 'Cinthia', '', 'pa8fg5oAyLo8g'),
 (3, 'Cinthia', 'cualquiera@algo.com', 'pa8fg5oAyLo8g'),
 (4, 'Cinthia', 'sadsa@mail.com', 'pa8fg5oAyLo8g'),
-(5, 'sad', 'perro@nada.com', 'pag3MD0c2B0nA');
+(5, 'sad', 'perro@nada.com', 'pag3MD0c2B0nA'),
+(6, 'Lucas', 'lucas@hotmail.com', 'paDQY21h.WZt.');
 
 --
 -- Índices para tablas volcadas
@@ -67,7 +78,7 @@ INSERT INTO `user` (`id_user`, `nombre`, `email`, `clave`) VALUES
 -- Indices de la tabla `oferta`
 --
 ALTER TABLE `oferta`
-  ADD PRIMARY KEY (`id-oferta`);
+  ADD PRIMARY KEY (`idoferta`);
 
 --
 -- Indices de la tabla `user`
@@ -83,13 +94,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `oferta`
 --
 ALTER TABLE `oferta`
-  MODIFY `id-oferta` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `idoferta` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_user` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
