@@ -25,14 +25,11 @@ if(isset($_SESSION['nombre'])){
   <link rel="stylesheet" href="css/mdb.min.css">
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/panel.css">
     <title>Hello, world!</title>
   </head>
   <body>
-  <?php
   
-
-  
-  ?>
    <?php 
   
    if (isset($_POST['Enviar']))          
@@ -66,9 +63,23 @@ if(isset($_SESSION['nombre'])){
     } 
     }
    ?>
+   <div>
+    <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Guardar</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Modificar</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Borrar</a>
+    </li>
+    
+    </ul>
+    <section id="Guardar Ofertas">
     <h3>Panel de Ofertas</h3>
         <div class="pb-5">
-          <form action="" method="POST" enctype="multipart/form-data">
+          <form  class="home" action="" method="POST" enctype="multipart/form-data">
       <div class="form-group">
         <label>Título</label>
         <input type="text" name="Titulo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="título">
@@ -89,6 +100,44 @@ if(isset($_SESSION['nombre'])){
       <button type="submit" name="Enviar" class="btn btn-primary">Submit</button>
       </form>
     </div>
+  </div>
+  </section>
+
+  <section>
+    <div class="lista">
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Oferta</th>
+      <th scope="col">Descripcion</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Acción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+  </section>
 
 
     <!-- Optional JavaScript -->
