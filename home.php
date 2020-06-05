@@ -21,6 +21,9 @@ if(isset($_SESSION['nombre'])){
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap2.min.css">
+  
+  
   <!-- Material Design Bootstrap -->
   <link rel="stylesheet" href="css/mdb.min.css">
   <!-- Your custom styles (optional) -->
@@ -41,6 +44,8 @@ if(isset($_SESSION['nombre'])){
     $ruta= $_FILES['imagen']['name'];
     $tipo= $_FILES['imagen']['type'];
 
+   
+
   
     
      if ($img == !NULL){
@@ -49,7 +54,7 @@ if(isset($_SESSION['nombre'])){
       if ($extension_correcta){
 
 
-       $oferta= mysqli_query($conexion,"INSERT INTO oferta (oferta, descripcion, precio, foto) VALUES ('$Titulo','$Descripcion','$Precio','$ruta')");
+       $oferta= mysqli_query($conexion,"INSERT INTO oferta (oferta, descripcion, precio, foto) VALUES ('$Titulo','$Descripcion','$Precio','$ruta')") or die(mysqli_error($conexion));
         if ($oferta){
         $move= move_uploaded_file($_FILES['imagen']['tmp_name'], "images/".$_FILES['imagen']['name']);
         echo "se guardo la oferta";
@@ -112,28 +117,29 @@ if(isset($_SESSION['nombre'])){
       <th scope="col">Oferta</th>
       <th scope="col">Descripcion</th>
       <th scope="col">Precio</th>
-      <th scope="col">Acción</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Borrar</th>
     </tr>
   </thead>
   <tbody>
+  <?php 
+    $buscarofertas=mysqli_query($conexion,"SELECT * FROM oferta ")or die(mysqli_error($conexion));
+    
+
+    while($ofertas=mysqli_fetch_array($buscarofertas)){ 
+
+  ?>
+  
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row"><?php echo $ofertas['idoferta'];  ?></th>
+      <td><?php echo $ofertas['oferta'];  ?></td>
+      <td><?php echo $ofertas['descripcion'];  ?></td>
+      <td><?php echo $ofertas['precio'];  ?></td>
+      <td><a href=''> <button class="btn btn-info"><i class="fas fa-pen"></i></button></a></td>
+      <td><a href=''><button class="btn btn-danger"><i class="fas fa-trash"></i></button></a></td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+
+    <?php  } ?>
   </tbody>
 </table>
     </div>
