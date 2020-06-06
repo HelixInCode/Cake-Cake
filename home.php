@@ -29,7 +29,7 @@ if(isset($_SESSION['nombre'])){
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/panel.css">
-    <title>Hello, world!</title>
+    <title>Panel Oferta</title>
   </head>
   <body>
   

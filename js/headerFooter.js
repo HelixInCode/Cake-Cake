@@ -6,41 +6,41 @@ const plantillaHeader = () => {
           <nav class="">
             <div class="nav-images">
 
-              <a class="contenedor-logo" href="./index.html">
+              <a class="contenedor-logo" href="./index.php">
                 <img id="logo" src="./img/backgrounds/Cake+Cake2png.png"  class="navbar-logo" alt="">       
               </a>
               <ul class="background-nav">
                 <li class="nav-item d-none d-md-block">
-                  <a href="index.html" class="nav-link">Home</a>
+                  <a href="index" class="nav-link">Home</a>
                 </li>
                <li class="nav-item">
-                  <a href="nosotros.html" class="nav-link">Nosotros</a>
+                  <a href="nosotros" class="nav-link">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                  <a href="productos.html" class="nav-link">Productos</a>
+                  <a href="productos" class="nav-link">Productos</a>
                 </li>
                 <li class="nav-item d-none d-md-block">
-                  <a href="servicios.html" class="nav-link">Servicios</a>
+                  <a href="servicios" class="nav-link">Servicios</a>
                 </li>
                 <li class="nav-item d-none d-md-block">
-                  <a href="promociones.html" class="nav-link">Promociones</a>
+                  <a href="promociones" class="nav-link">Promociones</a>
                 </li>
                 <li class="nav-item d-none d-md-block">
-                  <a href="contacto.html" class="nav-link">Contacto</a>
+                  <a href="contacto" class="nav-link">Contacto</a>
                 </li>
               </ul>
               <ul id="navHam" class="background-nav hide d-block d-md-none">
                 <li class="nav-item">
-                  <a href="servicios.html" class="nav-link">Servicios</a>
+                  <a href="servicios" class="nav-link">Servicios</a>
                 </li>
                 <li class="nav-item">
-                  <a href="promociones.html" class="nav-link">Promociones</a>
+                  <a href="promociones" class="nav-link">Promociones</a>
                 </li>
                 <li class="nav-item">
-                  <a href="contacto.html" class="nav-link">Contacto</a>
+                  <a href="contacto" class="nav-link">Contacto</a>
                 </li>
                 <li class="nav-item d-md-none">
-                  <a href="faq.html">
+                  <a href="faq">
                     P. Frecuentes
                   </a>
                 </li>
@@ -50,7 +50,7 @@ const plantillaHeader = () => {
                 <i id="ham-icon" class="fas fa-1-3x fa-bars"></i>
               </div>
 
-              <a href="faq.html" class="contenedor-preguntas d-none d-md-block">
+              <a href="faq" class="contenedor-preguntas d-none d-md-block">
                 Preguntas Frecuentes
               </a>
             </div>

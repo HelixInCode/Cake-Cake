@@ -1,0 +1,7 @@
+Options All -Indexes
+
+ ErrorDocument 404 /Cake-Cake-1/error404.php
+
+ RewriteEngine On
+
+ RewriteRule ^([a-zA-Z0-9/]+)$ $1.php

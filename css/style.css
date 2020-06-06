@@ -527,7 +527,7 @@ nav > .nav-images > .background-nav > .nav-item > a{
 }
 #faq > article > p{
     font-size: 25px;
-    color: rgba(0, 0, 0, 0.8);
+    color: rgb(111, 74, 74);
 }
 
 footer > .footer-body {
@@ -716,7 +716,7 @@ footer > .footer-body > .contenedor-medio > .footer-overlay{
         
     }
     #servicios > .servicios-container > .descripcion-servicios > p{
-        font-size: 20px;
+        font-size: 18px;
         text-align: justify;
     }
     #promociones {
