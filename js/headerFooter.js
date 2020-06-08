@@ -7,7 +7,7 @@ const plantillaHeader = () => {
             <div class="nav-images">
 
               <a class="contenedor-logo" href="./index.php">
-                <img id="logo" src="./img/backgrounds/Cake+Cake2png.png"  class="navbar-logo" alt="">       
+                <img id="logo" src="./img/backgrounds/logo-final.png"  class="navbar-logo" alt="">       
               </a>
               <ul class="background-nav">
                 <li class="nav-item d-none d-md-block">
