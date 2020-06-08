@@ -32,12 +32,12 @@
             <hr class="my-3">
             <div class="servicios-container pb-5">
                 <div class="imagen">
-                    <img src="../Cake-Cake/img/galeria/trab-5.jpeg" alt="">
+                    <img src="../landing/Cake-Cake-1/img/galeria/trab-5.jpeg" alt="">
                 </div>
                 <div class="descripcion-servicios">
-                    <p>Elaboramos postres a pedido yadecuados a tus festejos u ocasión. Podés pedir tortas de Cumpleaños, bodas, bautizos, babyShower o para cualquier celebración. También elaboramos tartas, galletas, alfajores, shots, y todo paraarmar mesas dulces,o una tarde de té.</p>
-                    <p>Tenemos diferentes propuestas en Sweet box y cajas Desayuno, armadas con todos los detalles para sorprender.</p>
-                    <p>Nuestro servicio de entrega es 100% Delivery. Directamente con nosotros, via whatsapp o através de la app de PedidosYa. </p>
+                    <p>Elaboramos postres a pedido y adecuados a tus festejos u ocasión. Podés pedir tortas de Cumpleaños, bodas, bautizos, babyShower o para cualquier celebración. También elaboramos tartas, galletas, alfajores, shots, y todo para armar mesas dulces, o una tarde de té.</p>
+                    <p>Tenemos diferentes propuestas en Sweet Box y Cajas Desayuno, armadas con todos los detalles para sorprender.</p>
+                    <p>Nuestro servicio de entrega es 100% Delivery. Directamente con nosotros, via whatsapp o a través de la app de PedidosYa. </p>
                 </div>
             </div>
         </section>
