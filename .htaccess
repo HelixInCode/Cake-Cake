@@ -1,6 +1,6 @@
 Options All -Indexes
 
- ErrorDocument 404 /Cake-Cake-1/error404.php
+ ErrorDocument 404 /cakemascake.com/error404.php
 
  RewriteEngine On
 
