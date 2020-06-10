@@ -49,7 +49,7 @@
 
         <hr class="form-divition mx-2">
 
-        <form action="" class="p-2">
+        <form action="enviar.php" class="p-2">
           <div class="input-container">
             <label for="nombre">Nombre</label>
             <input name="nombre" type="text">

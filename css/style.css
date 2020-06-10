@@ -319,7 +319,7 @@ nav > .nav-images > .background-nav > .nav-item > a{
     font-weight: 400;
     display: grid;
     grid-template-columns: 1fr;
-    background-color: var(--azulTransparente);
+    background-color: #327da8d4;
     border-radius: 10px;
     box-shadow: 2px 2px 2px rgba(109, 109, 109, 0.7);
 }
